@@ -6,41 +6,42 @@
         <title>orange RABBIT</title>
     </head>
     <body>
-    <div id="wrap">
+    <div class="wrapper">
         <header>
-            <span class="logo">
+            <div class="logo">
                 <h1>
-                    <ul>
-                        <li>orange</li>
-                        <li>RABBIT</li>
-                    </ul>
+                    <a class="logo_image">
+                        <div>
+                            <p>orange</p>
+                            <p>RABBIT</p>
+                        </div>
+                    </a>
                 </h1>
-            </span>
+            </div>
             <nav>
-                <figure>
-                    <a class="contact-icon"><span>contact</span></a>
-                </figure>
-                <figure>
-                    <a class="blog-icon"><span>blog</span></a>
-                </figure>
-                <figure>
-                    <a class="work-icon"><span>work</span></a>
-                </figure>
-                <figure>
-                    <a class="about-icon"><span>about</span></a>
-                </figure>
-                <figure>
-                    <a class="home-icon"><span>home</span></a>
-                </figure>
+                <div>
+                    <a class="home-icon">home</a>
+                </div>
+                <div>
+                    <a class="about-icon">about</a>
+                </div>
+                <div>
+                    <a class="work-icon">work</a>
+                </div>
+                <div>
+                    <a class="blog-icon">blog</a>
+                </div>
+                <div>
+                    <a class="contact-icon">contact</a>
+                </div>
             </nav>
         </header>
         <main>
             <div class="heading">
-                <ul>
-                    <li> DO YOU LIKE RABBITS? </li>
-                    <br><br>
-                    <li> DO YOU LIKE ORANGES? </li>
-                </ul>
+                <div>
+                    <p> DO YOU LIKE RABBITS? </p>
+                    <p> DO YOU LIKE ORANGES? </p>
+                </div>
             </div>
             <div class="articles">
                 <ul>
@@ -48,8 +49,9 @@
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua.</p>
-                        <a class="link">read more...</a>
+                            ut labore et dolore magna aliqua.
+                        </p>
+                        <a class="link">read more here</a>
                     </li>
                     <li>
                         <p>Lorem ipsum dolor sit amet,
@@ -57,7 +59,7 @@
                             sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua.
                         </p>
-                        <a class="link">read more...</a>
+                        <a class="link">read more here</a>
                     </li>
                     <li>
                         <p>Lorem ipsum dolor sit amet,
@@ -65,78 +67,68 @@
                             sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua.
                         </p>
-                        <a class="link">read more...</a>
+                        <a class="link">read more here</a>
                     </li>
                     <li>
                         <p>Lorem ipsum dolor sit amet,
                             consectetur adipisicing elit,
                             sed do eiusmod tempor incididunt
                             ut labore et dolore magna aliqua.</p>
-                        <a class="link">read more...</a>
+                        <a class="link">read more here</a>
                     </li>
-                </ul>
+                  </ul>
             </div>
+	        <div class="gradient">
+	        </div>
             <section>
                 <h2>Meet the team</h2>
-                <ul>
-                    <li>
-                        <figure>
-                            <h3>Hoof - <a class="team-link">Lead Designer</a></h3>
-                            <img alt="" width="300" height="300"/>
-                            <p>
-                                Hoof is our most talanted designer.
-                                However he`s not the talkative type
-                                and I would advise not getting on the
-                                wrong side of him.
-                            </p>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <h3>Nibs - <a class="team-link">CEO/Director</a></h3>
-                            <img alt="" width="300" height="300"/>
-                            <p>
-                                Nibs is our go to woman.
-                                She’s the ceo/director of orange
-                                rabbit and runs fast when she has too.
-                            </p>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <h3>Squawk - <a class="team-link">Developer</a></h3>
-                            <img alt="" width="300" height="300"/>
-                            <p>
-                                Squawk is no social bunny. But when it
-                                comes to programming he stands out from the crowd.
-                            </p>
-                        </figure>
-                    </li>
-                </ul>
-            </section>
+                <figure class="member">
+                    <figcaption>Hoof - <a class="team-link">Lead Designer</a></figcaption>
+                    <img src="images/horse.jpg" alt="Photo horse"/>
+                    <p>
+                        Hoof is our most talanted designer.
+                        However he`s not the talkative type
+                        and I would advise not getting on the
+                        wrong side of him.
+                    </p>
+                </figure>
+                <figure class="member">
+                    <figcaption>Nibs - <a class="team-link">CEO/Director</a></figcaption>
+                    <img src="images/rabbit.jpg" alt="Photo rabbit"/>
+                    <p>
+                        Nibs is our go to woman.
+                        She’s the ceo/director of orange
+                        rabbit and runs fast when she has too.
+                    </p>
+                </figure>
+                <figure class="member">
+                    <figcaption>Squawk - <a class="team-link">Developer</a></figcaption>
+                    <img src="images/ostrich.jpg" alt="Photo squawk"/>
+                    <p>
+                        Squawk is no social bunny. But when it
+                        comes to programming he stands out from the crowd.
+                    </p>
+                </figure>
+	        </section>
             <form action="">
                 <h2>Send us a message</h2>
-                <ul>
-                    <li>
-                          <label for="name">Name:</label>
-                          <input type="text" id="name" required>
-                    </li>
-                    <li>
-                          <label for="email">Email:</label>
-                          <input type="email" id="email" required>
-                    </li>
-                    <li>
-                          <label for="message">Message:</label>
-                          <textarea name="area" id="message"></textarea>
-                    </li>
-                    <li>
-                          <input type="submit" id="bottom" value="Submit">
-                    </li>
-                </ul>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea name="area" id="message"></textarea>
+                </div>
+                <input type="submit" id="bottom" value="Submit">
             </form>
         </main>
         <footer>
-            <span>COPYRIGHT ORANGE RABBIT - DESIGNED BY JAKE BHATT</span>
+            <div>COPYRIGHT ORANGE RABBIT - DESIGNED BY JAKE BHATT</div>
         </footer>
     </div>
     </body>

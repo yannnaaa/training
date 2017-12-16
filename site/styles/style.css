@@ -9,20 +9,23 @@ body {
     width: 1600px;
 }
 
-#wrap {
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
     min-height: 100%;
     position: relative;
 }
 
 main {
     margin-top: 127px;
-    padding-bottom: 160px;
+    padding-bottom: 100px;
 }
 
 header {
     padding-left: 200px;
-    display: block;
-    width: 1400px;
+    width: 1600px; 	
     height: 127px;
     position: fixed;
     top: 0;
@@ -32,60 +35,69 @@ header {
 
 .logo {
     display: inline-block;
-    background: url("../images/logo.png");
-    width: 100px;
-    height: 110px;
-    margin: 0 10px 20px 10px;
+    width: 300px;
+    height: 127px;
+    cursor: pointer;
 }
 
-ul {
-    list-style-type: none;
+h1 {
+    height: 127px;
+    font: bold 37px "Calibri";
 }
 
-.logo li:nth-child(1) {
+.logo_image {
+    display: inline-block;
+    background: url("../images/logo.png") no-repeat;
+    width: 300px;
+    height: 127px;
+}
+
+h1 div {
+    margin-top: 10px;
+    margin-left: 150px;
+    padding-top: 0;
+}
+
+h1 div p:nth-child(1) {
     color: #fb9c06;
 }
 
-.logo li:nth-child(2) {
+h1 div p:nth-child(2) {
     color: #6e6d6b;
     font: bold 50px "BebasNeueRegular";
 }
 
-h1 {
-    display: inline-block;
-    margin-left: 155px;
-    margin-top: 10px;
-    text-align: center;
-    font: bold 37px "Calibri";
-}
-
 nav {
     float: right;
-    padding-right: 280px;
+    padding-right: 520px;
+    height: 127px;
 }
 
-figure {
-    display: block;
-    float: right;
-    padding: 20px 40px 30px 40px;
-    text-align: center;
-}
-
-a span {
+nav div {
     display: inline-block;
-    color: #9e9b9b;
-    margin-top: 60px;
-    font: 600 1rem Calibri;
-    cursor: default;
+    height: 127px;
+    float: left;
 }
+
+nav a {
+    color: #9f9c9c;
+    font:  600 16px Calibri ;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 40px 20px 40px;
+    padding-bottom: 30px;
+}
+
 
 .work-icon, .contact-icon, .blog-icon, .home-icon, .about-icon {
     background: url("../images/sprites.png") no-repeat;
-    float: right;
+    float: left;
+    vertical-align: bottom;
+    line-height: 130px;
 }
 
-nav figure:hover {
-    background-color: #f8f7f6;
+nav div:hover {
+    background-color: #f1f0ef;
 }
 
 .work-icon{
@@ -113,38 +125,42 @@ nav figure:hover {
 }
 
 .about-icon{
-    background-position: -66px -1px ;
+    background-position: -66px -1px;
     width: 40px;
     height: 50px;
 }
 
 .heading {
     background: url("../images/orange.jpg") no-repeat;
-    background-size: 1600px 400px;
+    width: 100%;
     height: 400px;
     border-top: 5px solid #fb9c06;
     border-bottom: 5px solid #fb9c06;
+    clear: both;
 }
 
-.heading ul {
-    margin-top: 130px;
-}
-
-.heading li {
+.heading div {
     display: inline-block;
+    margin-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
     font: bold 50px "BebasNeueRegular";
 }
 
-.heading li:first-child {
+.heading p {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.heading p:first-child {
     margin-left: 220px;
+    margin-bottom: 30px;
     background-color: #4e4f4f;
     line-height: 65px;
     color: #fb9c06;
 }
 
-.heading li:last-child {
+.heading p:last-child {
     margin-left: 212px;
     background-color: #ffc759;
     line-height: 75px;
@@ -154,16 +170,24 @@ nav figure:hover {
 .articles {
     display: inline-block;
     width: 1200px;
+    height: 160px;
     margin-left: 200px;
     float: left;
+    overflow: hidden;
 }
 
 .articles li {
     width: 250px;
-    height: 100%;
+    height: 100px;
     margin: 30px 19px;
     float: left;
-    font: bold 15px "Calibri"
+    font: bold 15px "Calibri";
+    overflow: hidden;
+}
+
+.articles li p {
+    height: 75px;
+    overflow: hidden;
 }
 
 .articles .link {
@@ -173,19 +197,32 @@ nav figure:hover {
     float: right;
     margin-right: 10px;
     font: 17px "Calibri Light";
+    white-space: nowrap;
+    height: 19px;
+    width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .articles .link:hover {
-    cursor: default;
+    cursor: pointer;
     text-decoration: underline;
+}
+
+.gradient {
+    clear: both;
+    width: 100%;
+    height: 10px;		
+    background: linear-gradient(to bottom, rgba(196,196,196,0.65) 0%,rgba(2,2,2,0) 99%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00000000',GradientType=0 );
 }
 
 section {
     display: inline-block;
-    width: 1200px;
-    height: 100%;
-    margin-left: 200px;
-    margin-top: 10px;
+    height: 600px;
+    margin: 10px 150px 0 150px;
+    overflow: hidden;
+    clear: both;
 }
 
 h2 {
@@ -194,79 +231,61 @@ h2 {
     font: 40px Martel Sans;
 }
 
-section figure {
-    width: 300px;
-    height: 100%;
-    float: left; 
-    padding: 20px 0 30px ;
+section .member {
+    width: 316px;
+    height: 471px;
+    float: left;
+    padding: 20px 30px 30px 30px;
+    margin: 0 28px 0 28px;
+    overflow: hidden;
 }
 
-h3 {
-    font: 22px "Calibri Light"
+.member figcaption {
+    font: 22px "Calibri Light";
+    text-align: center;
+    width: 316px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-section figure a {
+section .member a {
     color: #fb9c06;
 }
 
-section figure a:hover {
+section .member a:hover {
     text-decoration: underline;
-    cursor: default;
+    cursor: pointer;
 }
 
-section li:nth-child(1) img  {
-    background: url("../images/horse.jpg") no-repeat;
-}
-
-section li:nth-child(1) figure {
-    padding-left: 0;
-    padding-right: 80px;		
-}
-
-section li:nth-child(2) img  {
-    background: url("../images/rabbit.jpg") no-repeat;	
-}
-
-section li:nth-child(2) figure {
-    padding-left: 70px;
-    padding-right: 70px;		
-}
-
-section li:nth-child(3) img  {
-    background: url("../images/ostrich.jpg") no-repeat;	
-}
-
-section li:nth-child(3) figure {
-    padding-left: 80px;
-    padding-right: 0;	
-}
-
-section figure img {
+section .member img {
     background-size: 300px 300px;
     border: 8px solid #fb9c06;
-    border-radius: 150px;
+    border-radius: 155px;
     margin-bottom: 20px;
     margin-top: 30px; 
 }
 
-section figure p {
+section .member p {
     text-align: left;
     padding: 0 20px 0 30px; 
     font: 15px "Calibri Light";
+    height: 73px;
+    overflow: hidden;
 }
 
-form ul {
+form {
     margin-top: 20px;
+    height: 400px;
+    clear: both;
 }
 
-form li {
-    display: inline-block;
-    margin: 20px 0 20px 200px;
+form div {
+    margin: 20px 200px 20px 200px;
     color: #fb9c06;
-    font: 1.5rem "Martel Sans";
+    font: 24px "Martel Sans";
 }
 
-form li:nth-child(3) label {
+form div:nth-child(3) label {
    vertical-align: top;
 }
 
@@ -281,7 +300,7 @@ form input {
     border-top: 2px solid #d2d0cf;
     background-color: #f8f7f6;
     outline:none;
-    font: bold 1.2rem "Martel Sans";
+    font: bold 18px "Martel Sans";
 }
 
 form textarea:focus,
@@ -290,33 +309,29 @@ form input:focus {
 }
 
 form label {
-    display: inline-block;
     width: 100px;
     height: 30px;
 }
 
-form textarea {
+form textarea,
+form div:nth-child(4) {
     height: 100px;
     outline: none;
     resize: none;
     overflow: hidden;
 }
 
-form li:nth-child(4) {
-    margin-left: 200px;
-    margin-top: 0;
-    float: right;
-}
-
 form #bottom {
     height: 45px;
     width: 175px;
-    margin-right: 230px;
+    margin-right: 225px;
     border: 0;
     border-bottom: 3px solid #cc830f;
     background-color: #fb9c06;
     font: 25px Martel Sans;
     color: #fff;
+    cursor: pointer;
+    float: right;
 }
 
 form #bottom:active {
@@ -325,7 +340,6 @@ form #bottom:active {
 }
 
 footer {
-    display: inline-block;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -333,10 +347,10 @@ footer {
     height: 70px;
     background: #fb9c06;
     text-align: center;
+    clear: both;
 }
 
-footer span {
-    display: inline-block;
+footer div {
     width: 100%;
     color: #fff;
     margin-top: 7px;
