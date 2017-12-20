@@ -9,6 +9,12 @@ body {
     width: 1600px;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 ul {
     list-style-type: none;
 }
@@ -52,17 +58,16 @@ h1 {
     height: 127px;
 }
 
-h1 div {
-    margin-top: 10px;
-    margin-left: 150px;
-    padding-top: 0;
-}
-
-h1 div p:nth-child(1) {
+h1 span:nth-child(1) {
+    display: inline-block;
     color: #fb9c06;
+    margin-left: 153px;
+    margin-top: 10px;
 }
 
-h1 div p:nth-child(2) {
+h1 span:nth-child(2) {
+    display: inline-block;
+    margin-left: 150px;
     color: #6e6d6b;
     font: bold 50px "BebasNeueRegular";
 }
@@ -73,7 +78,7 @@ nav {
     height: 127px;
 }
 
-nav div {
+nav .navigation {
     display: inline-block;
     height: 127px;
     float: left;
@@ -88,15 +93,18 @@ nav a {
     padding-bottom: 30px;
 }
 
-
-.work-icon, .contact-icon, .blog-icon, .home-icon, .about-icon {
+.work-icon,
+.contact-icon,
+.blog-icon,
+.home-icon,
+.about-icon {
     background: url("../images/sprites.png") no-repeat;
     float: left;
     vertical-align: bottom;
     line-height: 130px;
 }
 
-nav div:hover {
+nav .navigation:hover {
     background-color: #f1f0ef;
 }
 
@@ -136,7 +144,6 @@ nav div:hover {
     height: 400px;
     border-top: 5px solid #fb9c06;
     border-bottom: 5px solid #fb9c06;
-    clear: both;
 }
 
 .heading div {
@@ -147,12 +154,9 @@ nav div:hover {
     font: bold 50px "BebasNeueRegular";
 }
 
-.heading p {
+.heading p:first-child {
     padding-right: 20px;
     padding-left: 20px;
-}
-
-.heading p:first-child {
     margin-left: 220px;
     margin-bottom: 30px;
     background-color: #4e4f4f;
@@ -161,6 +165,8 @@ nav div:hover {
 }
 
 .heading p:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
     margin-left: 212px;
     background-color: #ffc759;
     line-height: 75px;
@@ -172,8 +178,8 @@ nav div:hover {
     width: 1200px;
     height: 160px;
     margin-left: 200px;
-    float: left;
     overflow: hidden;
+    clear: both;
 }
 
 .articles li {
@@ -204,17 +210,19 @@ nav div:hover {
     text-overflow: ellipsis;
 }
 
+.articles .link:after {
+    content: "...";
+}
+
 .articles .link:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
 .gradient {
-    clear: both;
     width: 100%;
     height: 10px;		
     background: linear-gradient(to bottom, rgba(196,196,196,0.65) 0%,rgba(2,2,2,0) 99%,rgba(0,0,0,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6c4c4c4', endColorstr='#00000000',GradientType=0 );
 }
 
 section {
@@ -222,7 +230,6 @@ section {
     height: 600px;
     margin: 10px 150px 0 150px;
     overflow: hidden;
-    clear: both;
 }
 
 h2 {
@@ -276,7 +283,6 @@ section .member p {
 form {
     margin-top: 20px;
     height: 400px;
-    clear: both;
 }
 
 form div {
@@ -321,7 +327,7 @@ form div:nth-child(4) {
     overflow: hidden;
 }
 
-form #bottom {
+form .bottom {
     height: 45px;
     width: 175px;
     margin-right: 225px;
@@ -334,9 +340,13 @@ form #bottom {
     float: right;
 }
 
-form #bottom:active {
+form .bottom:active {
     border: none;
     margin-top: 2px;
+}
+
+form .bottom:focus {
+    background-color: #fb9c06;
 }
 
 footer {
@@ -347,7 +357,6 @@ footer {
     height: 70px;
     background: #fb9c06;
     text-align: center;
-    clear: both;
 }
 
 footer div {
