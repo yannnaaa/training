@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 1600px;
+    font-family: Calibri, sans-serif;
+    user-select: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    font-size: 0;
+}
+
+main {
+    margin-top: 127px;
+    padding-bottom: 100px;
+}
+
+header {
+    padding-left: 200px;
+    width: 1600px; 	
+    height: 127px;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    border-bottom: 5px solid #fb9c06;
+}
+
+.logo {
+    display: inline-block;
+    width: 300px;
+    height: 127px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    height: 127px;
+    user-select: text;
+}
+
+.logo_image {
+    display: inline-block;
+    background: url("../images/logo.png") no-repeat;
+    width: 300px;
+    height: 127px;
+}
+
+h1 span:nth-child(1) {
+    display: inline-block;
+    color: #fb9c06;
+    margin-left: 153px;
+    margin-top: 10px;
+    font: bold 37px "Calibri";
+    font-family: "Calibri", sans-serif;
+}
+
+h1 span:nth-child(2) {
+    display: inline-block;
+    margin-left: 150px;
+    color: #6e6d6b;
+    font: bold 50px "BebasNeueRegular";
+    font-family: "BebasNeueRegular", Calibri, sans-serif;
+}
+
+nav {
+    float: right;
+    padding-right: 520px;
+    height: 127px;
+}
+
+nav .navigation {
+    display: inline-block;
+    height: 127px;
+    float: left;
+}
+
+nav a {
+    color: #9f9c9c;
+    font:  600 16px Calibri ;
+    font-family: Calibri, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    margin: 20px 40px 20px 40px;
+    padding-bottom: 30px;
+}
+
+.work-icon,
+.contact-icon,
+.blog-icon,
+.home-icon,
+.about-icon {
+    background: url("../images/sprites.png") no-repeat;
+    float: left;
+    vertical-align: bottom;
+    line-height: 130px;
+}
+
+nav .navigation:hover {
+    background-color: #f1f0ef;
+}
+
+.work-icon{
+    background-position: -119px -3px ;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-icon{
+    background-position: -247px -2px;
+    width: 52px;
+    height: 50px;
+}
+
+.blog-icon{
+    background-position: -182px -2px ;
+    width: 42px;
+    height: 50px;
+}
+
+.home-icon{
+    background-position: 0 0;
+    width: 55px;
+    height: 50px;
+}
+
+.about-icon{
+    background-position: -66px -1px;
+    width: 40px;
+    height: 50px;
+}
+
+.slider {
+    background: url("../images/orange.jpg") no-repeat;
+    width: 100%;
+    height: 400px;
+    border-top: 5px solid #fb9c06;
+    border-bottom: 5px solid #fb9c06;
+    user-select: text;
+}
+
+.slider div {
+    display: inline-block;
+    margin-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font: bold 50px "BebasNeueRegular";
+    font-family: "BebasNeueRegular", Calibri, sans-serif;
+}
+
+.slider p:first-child {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 220px;
+    margin-bottom: 30px;
+    background-color: #4e4f4f;
+    line-height: 65px;
+    color: #fb9c06;
+}
+
+.slider p:last-child {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 212px;
+    background-color: #ffc759;
+    line-height: 75px;
+    color: #6e6d6b;
+}
+
+.articles {
+    display: inline-block;
+    width: 1200px;
+    margin-left: 200px;
+    overflow: hidden;
+    max-height: 320px;
+}
+
+.articles li {
+    width: 250px;
+    max-height: 94px;
+    margin: 30px 19px;
+    float: left;
+    font: bold 15px "Calibri";
+    font-family: Calibri, sans-serif;
+    overflow: hidden;
+}
+
+.articles li p {
+    height: 75px;
+    overflow: hidden;
+    user-select: text;
+}
+
+.articles .link {
+    display: inline-block;
+    text-align: right;
+    color: #fb9c06;
+    float: right;
+    margin-right: 10px;
+    font: 17px "Calibri Light";
+    font-family: "Calibri Light", Calibri, sans-serif;
+    white-space: nowrap;
+    height: 19px;
+    width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.articles .link:after {
+    content: "...";
+}
+
+.articles .link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.gradient {
+    width: 100%;
+    height: 10px;		
+    background: linear-gradient(to bottom, rgba(196,196,196,0.65) 0%,rgba(2,2,2,0) 99%,rgba(0,0,0,0) 100%);
+}
+
+.members {
+    display: inline-block;
+    margin: 10px 150px 0 150px;
+    overflow: hidden;
+    max-height: 1100px;
+}
+
+h2 {
+    text-align: center;
+    color: #fb9c06;
+    font: 40px Martel Sans;
+    font-family: "Martel Sans", Calibri, sans-serif;
+}
+
+section .member {
+    width: 316px;
+    height: 471px;
+    float: left;
+    padding: 20px 30px 30px 30px;
+    margin: 0 28px 0 28px;
+    overflow: hidden;
+    user-select: text;
+}
+
+.member figcaption {
+    font: 22px "Calibri Light";
+    font-family: "Calibri Light", Calibri, sans-serif;
+    text-align: center;
+    width: 316px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+section .member a {
+    color: #fb9c06;
+}
+
+section .member a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+section .member img {
+    background-size: 300px 300px;
+    border: 8px solid #fb9c06;
+    border-radius: 155px;
+    margin-bottom: 20px;
+    margin-top: 30px; 
+}
+
+section .member p {
+    text-align: left;
+    padding: 0 20px 0 30px; 
+    font: 15px "Calibri Light";
+    font-family: "Calibri Light", Calibri, sans-serif;
+    height: 73px;
+    overflow: hidden;
+}
+
+form {
+    margin-top: 20px;
+    height: 400px;
+}
+
+form label:nth-child(3) {
+   vertical-align: top;
+}
+
+form textarea,
+form input {
+    width: 1070px;
+    height: 34px;
+    margin-left: 20px;
+    float: right;
+    border: 0;
+    border-left: 5px solid #d2d0cf;
+    border-top: 2px solid #d2d0cf;
+    background-color: #f8f7f6;
+    outline:none;
+    font: bold 18px "Martel Sans";
+    font-family: "Martel Sans", Calibri, sans-serif;
+}
+
+form textarea:focus,
+form input:focus {
+    background-color: #fff4ce;
+}
+
+form label {
+    width: 1200px;
+    display: inline-block;
+    padding-right: 20px;
+    margin: 20px 20px 15px 200px;
+    color: #fb9c06;
+    font: 24px "Martel Sans";
+    font-family: "Martel Sans", Calibri, sans-serif;
+}
+
+form textarea,
+form label:nth-child(4) {
+    height: 100px;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+}
+
+form .bottom {
+    height: 45px;
+    width: 175px;
+    margin-right: 225px;
+    border: 0;
+    border-bottom: 3px solid #cc830f;
+    background-color: #fb9c06;
+    font: 25px Martel Sans;
+    font-family: "Martel Sans", Calibri, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+}
+
+form .bottom:active {
+    border: none;
+    margin-top: 2px;
+}
+
+form .bottom:focus {
+    background-color: #fb9c06;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1600px;
+    height: 70px;
+    background: #fb9c06;
+    text-align: center;
+    border-bottom: 3px solid #cc830f;
+    user-select: text;
+}
+
+footer div {
+    width: 100%;
+    color: #fff;
+    margin-top: 7px;
+    font: 33px Martel Sans;
+    font-family: "Martel Sans", Calibri, sans-serif;
+}
+
+@font-face {
+    font-family: 'Martel Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/martel-sans-v4-latin-200.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
